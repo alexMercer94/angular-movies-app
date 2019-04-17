@@ -1,0 +1,17 @@
+{
+  "APPNAME": "MoviesApp",
+  "HOME": {
+    "WELCOME": "Welcome",
+    "THEATERMOVIES": "Movies in Theaters",
+    "POPULARMOVIES": "Popular Movies",
+    "BESTCIFIMOVIES": "Best Ci-fi Movies",
+    "POPULARKIDSMOVIES": "Popular Kids Movies"
+  },
+  "SEARCH": {
+    "SEARCHMOVIE": "Search Movie..."
+  },
+  "MOVIE":{
+    "OVERVIEW": "Overview"
+  }
+
+}

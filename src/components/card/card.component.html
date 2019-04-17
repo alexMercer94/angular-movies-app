@@ -1,0 +1,5 @@
+<div class="card-columns m-5 animated fadeIn puntero">
+  <div (click)="movieDetail(item)" class="card" *ngFor="let item of items">
+    <img [src]="item | urlimage" class="card-img-top" alt="..." />
+  </div>
+</div>

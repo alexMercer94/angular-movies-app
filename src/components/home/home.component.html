@@ -1,0 +1,20 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-black-50">
+    <h1 class="display-4">{{ 'HOME.WELCOME' | translate }}</h1>
+    <p class="lead">{{ 'APPNAME' | translate }}</p>
+  </div>
+</div>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="container mt-4" *ngIf="moviesInTheaters">
+  <app-card-home [items]="moviesInTheaters" title=" {{ 'HOME.THEATERMOVIES' | translate }} "></app-card-home>
+</div>
+
+<div class="container mt-4">
+  <app-card-home [items]="popularMovies" title="{{ 'HOME.POPULARMOVIES' | translate }}"></app-card-home>
+</div>
+
+<div class="container mt-4 mb-4">
+  <app-card-home [items]="popularKidsMovies" title="{{ 'HOME.POPULARKIDSMOVIES' | translate }}"></app-card-home>
+</div>

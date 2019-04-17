@@ -1,0 +1,72 @@
+<div *ngIf="items.length > 0">
+  <h1 class="text-left ml-5">{{ title }}</h1>
+  <hr class="text-white" />
+  <div class="row animated fadeIn fast">
+    <div class="col-sm-6">
+      <div class="row">
+        <div
+          class="col-md-12 div-pic-1 puntero"
+          [routerLink]="['/movie', items[0].id, 'home']"
+          [ngStyle]="{ 'background-image': 'url(' + (items[0] | urlimage: true) + ')' }"
+        >
+          <p class="pic-titulo">
+            {{ items[0].title }}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-sm-6 div-pic-2 puntero"
+          [routerLink]="['/movie', items[1].id, 'home']"
+          [ngStyle]="{ 'background-image': 'url(' + (items[1] | urlimage: true) + ')' }"
+        >
+          <p class="pic-titulo">
+            {{ items[1].title }}
+          </p>
+        </div>
+        <div
+          class="col-sm-6 div-pic-2 puntero"
+          [routerLink]="['/movie', items[2].id, 'home']"
+          [ngStyle]="{ 'background-image': 'url(' + (items[2] | urlimage: true) + ')' }"
+        >
+          <p class="pic-titulo">
+            {{ items[2].title }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div
+          class="col-sm-6 div-pic-2 puntero"
+          [routerLink]="['/movie', items[3].id, 'home']"
+          [ngStyle]="{ 'background-image': 'url(' + (items[3] | urlimage: true) + ')' }"
+        >
+          <p class="pic-titulo">
+            {{ items[3].title }}
+          </p>
+        </div>
+        <div
+          class="col-sm-6 div-pic-2 puntero"
+          [routerLink]="['/movie', items[4].id, 'home']"
+          [ngStyle]="{ 'background-image': 'url(' + (items[4] | urlimage: true) + ')' }"
+        >
+          <p class="pic-titulo">
+            {{ items[4].title }}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-md-12 div-pic-1 puntero"
+          [routerLink]="['/movie', items[5].id, 'home']"
+          [ngStyle]="{ 'background-image': 'url(' + (items[5] | urlimage: true) + ')' }"
+        >
+          <p class="pic-titulo">
+            {{ items[5].title }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

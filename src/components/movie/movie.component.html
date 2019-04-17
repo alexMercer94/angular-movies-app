@@ -1,0 +1,45 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="container">
+  <div *ngIf="!loading">
+    <h1 class="animated fadeIn mt-3">
+      {{ movie.title | uppercase }}
+    </h1>
+    <hr />
+    <div class="row animated fadeIn fast">
+      <div class="col-md-4">
+        <img [src]="movie | urlimage" [alt]="movie.title" class="img-thumbnail img-fluid" />
+        <br />
+        <a [routerLink]="['/', backTo, searching]" class="btn btn-outline-danger btn-block">Regresar</a>
+      </div>
+      <div class="col-md-8">
+        <h3>
+          {{ movie.title }}
+          <small>
+            <span class="badge badge-primary">{{ movie.release_date | date: 'yyyy' }}</span>
+          </small>
+        </h3>
+
+        <span class="badge badge-success" *ngFor="let genres of movie.genres">{{ genres.name }}</span>
+        <hr />
+        <h3>{{ 'MOVIE.OVERVIEW' | translate }}</h3>
+        <p class="text-justify">
+          {{ movie.overview }}
+        </p>
+        <h3>Phrase</h3>
+        <p>{{ movie.tagline }}</p>
+        <p>
+          Popularity: <span class="badge badge-primary">{{ movie.popularity | number: '.2-2' }}%</span>
+          <br />
+          Votes: <span class="badge badge-primary">{{ movie.vote_average }}</span>
+        </p>
+        <hr />
+        <div class="mb-4">
+          <h3>Images</h3>
+          <img [src]="movie | urlimage: true" class="img-fluid mt-4" />
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>
