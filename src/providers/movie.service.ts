@@ -8,7 +8,7 @@ import { EApi } from '../enums/api.enum';
   providedIn: 'root'
 })
 export class MovieService {
-  private apiKey = 'ae154bce41b39a3b9a949f82bef12b3d';
+  private apiKey = '<api-key>';
 
   movies: any[] = [];
 
